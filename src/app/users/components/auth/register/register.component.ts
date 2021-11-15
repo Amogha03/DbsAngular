@@ -23,8 +23,8 @@ export class RegisterComponent implements OnInit {
         this.router.navigate(['/users/login']);
       },
       (err) => {
-        console.log(JSON.stringify(err.error));
-        this.error = err.error;
+        console.log(JSON.stringify(err));
+        this.error = err;
       }
     );
   }

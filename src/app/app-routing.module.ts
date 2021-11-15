@@ -19,6 +19,15 @@ const routes: Routes = [
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
   {
+    path: 'profiles',
+    loadChildren: () =>
+      import('./profiles/profiles.module').then((m) => m.ProfilesModule),
+  },
+  {
+    path: 'exp',
+    loadChildren: () => import('./exp/exp.module').then((m) => m.ExpModule),
+  },
+  {
     path: '**',
     component: NotFoundComponent,
   },
